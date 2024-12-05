@@ -43,14 +43,14 @@ const HomePage = () => {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="flex bg-gradient-to-r from-[#ffe5c8] to-white rounded-xl mt-10 flex-col items-center justify-center w-[1500px]">
-        <div className="flex w-[1300px] bg-gradient-to-l from-[#ffe5c8] to-white rounded-xl mt-5 items-center justify-center">
+      <div className="flex bg-gradient-to-r from-[#101025] to-[#16163a]  rounded-xl mt-10 flex-col items-center justify-center w-[1500px]">
+        <div className="flex w-[1300px] bg-gradient-to-l from-[#fffaf5] to-white rounded-xl mt-5 items-center justify-center">
           <Navbar />
         </div>
 
         <div className="grid grid-cols-2 gap-5 items-center mt-5 justify-center bg-inherit shadow-purple-300">
           <div className="flex flex-col mt-[50px] items-center h-full w-full">
-            <div className="text-[#04031f] flex w-full h-full mt-[80px] ml-[200px] flex-col">
+            <div className="text-white flex w-full h-full mt-[80px] ml-[200px] flex-col">
               <h1 className="flex items-center font-bold text-[25px]">
                 Hi{" "}
                 {authUser && (
@@ -63,7 +63,7 @@ const HomePage = () => {
 
               <button
                 onClick={DownloadCertificate}
-                className="flex w-[200px] mt-[60px] items-center p-3 italic justify-center bg-gradient-to-l from-[#f79b32] to-[#ffe5c8] hover:bg-gradient-to-l hover:from-[#ff7113] hove:to-[#ffe5c8] rounded-md text-white font-bold"
+                className="flex w-[200px] mt-[60px] items-center p-3 italic justify-center bg-[#f79b32]  hover:bg-gradient-to-l hover:from-[#ff7113] hove:to-[#ffe5c8] rounded-md text-white font-bold"
               >
                 Download Certificate
               </button>
@@ -74,7 +74,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center h-[200px] w-full bg-gradient-to-l from-white">
+        <div className="flex justify-center items-center h-[200px] text-white w-full bg-gradient-to-r from-[#101025] to-[#16163a]">
           Lower section
         </div>
       </div>

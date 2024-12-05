@@ -39,7 +39,7 @@ useEffect(()=>{
   return (
     <div className='flex text-[#04031f] h-screen flex-col w-full items-center justify-center bg-gradient-to-r from-[#ffe5c8] to-white '>
         
-        <div className='flex w-[1300px]  mb-[100px] bg-gradient-to-l from-[#ffe5c8] to-white rounded-xl mt-5 items-center justify-center'>
+        <div className='flex w-[1300px]  mb-[70px] mt-[30px] bg-gradient-to-l from-[#ffe5c8] to-white rounded-xl  items-center justify-center'>
             <Navbar />
         </div>
 

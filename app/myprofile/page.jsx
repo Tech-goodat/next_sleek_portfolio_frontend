@@ -92,7 +92,9 @@ const UserProfile = () => {
 
   const handlePictureInput = (e) => {
     const file = e.target.files[0];
-    if (!file) return;
+    if (file){(console.error("cannot upload more than one file", error))}
+    else if (!file) return;
+
 
     const imageFormData = new FormData();
     imageFormData.append("file", file);
@@ -125,12 +127,12 @@ const UserProfile = () => {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="flex bg-gradient-to-r from-[#ffe5c8] to-[#fff1e2] rounded-xl mt-10 flex-col items-center justify-center w-[1500px] ">
-        <div className="flex w-[1300px] bg-gradient-to-l from-[#ffe5c8] to-white rounded-xl mt-5 items-center justify-center">
+      <div className="flex bg-gradient-to-r from-[#101025] to-[#16163a] rounded-xl mt-10 flex-col items-center justify-center w-[1500px] ">
+        <div className="flex w-[1300px] bg-gradient-to-l from-[#fff2e2] to-white rounded-xl mt-5 items-center justify-center">
           <Navbar />
         </div>
-        <div className="flex w-full items-center ">
-          <div className="flex items-center justify-center rounded-full bg-gray-300 p-1 ml-[150px] mt-[30px] border border-green-700">
+        <div className="flex w-full items-center  ">
+          <div className="flex items-center justify-center rounded-full bg-gray-300 p-1 ml-[100px] mt-[30px] border border-green-700">
             <img
               src={profileData.image_url || "/tom.png"}
               alt="Profile"
@@ -139,7 +141,7 @@ const UserProfile = () => {
           </div>
           <button
             onClick={triggerFileInput}
-            className="flex items-center p-3 justify-center w-[300px] bg-gradient-to-r from-[#ffa569] to-[#ffe5c8] ml-[45px] italic rounded-md"
+            className="flex items-center p-3 justify-center w-[330px] bg-gradient-to-r from-[#ffa569] to-[#ffe5c8] ml-[55px] italic rounded-md"
           >
             Edit profile picture
           </button>
@@ -151,20 +153,20 @@ const UserProfile = () => {
             className="hidden"
           />
           <button
-            className="flex items-center p-3 justify-center w-[300px] border bg-gradient-to-l from-[#ffe5c8] to-white border-red-600 ml-[45px] italic rounded-md"
+            className="flex items-center p-3 justify-center w-[330px] border bg-gradient-to-l from-[#ffe5c8] to-white border-red-600 ml-[45px] italic rounded-md"
           >
             Delete profile picture
           </button>
           <button
             onClick={handleLogOut}
-            className="flex items-center p-3 justify-center w-[300px] bg-gradient-to-r from-[#ffa569] to-[#ffe5c8] ml-[45px] italic rounded-md"
+            className="flex items-center p-3 justify-center w-[330px] bg-gradient-to-r from-[#ffa569] to-[#ffe5c8] ml-[45px] italic rounded-md"
           >
             Sign out
           </button>
         </div>
         <form
           onSubmit={handleEPatch}
-          className="flex gap-5 bg-inherit flex-col w-full mt-10 items-center justify-center"
+          className="flex gap-5 text-white bg-inherit flex-col w-full mt-10 items-center justify-center"
         >
           <div className="flex flex-col">
             <label className="ml-2 text-sm" htmlFor="name">
@@ -173,7 +175,7 @@ const UserProfile = () => {
             <input
               onChange={handleChange}
               value={profileData.name}
-              className="flex bg-inherit border border-gray-400 mt-3 w-[1200px] rounded-md p-3 text-sm italic outline-none"
+              className="flex bg-inherit border border-gray-400 mt-3 w-[1300px] rounded-md p-3 text-sm italic outline-none"
               type="text"
               name="name"
             />
@@ -185,7 +187,7 @@ const UserProfile = () => {
             <input
               onChange={handleChange}
               value={profileData.email}
-              className="flex w-[1200px] bg-inherit border border-gray-400 mt-3 rounded-md p-3 text-sm italic outline-none"
+              className="flex w-[1300px] bg-inherit border border-gray-400 mt-3 rounded-md p-3 text-sm italic outline-none"
               type="text"
               name="email"
             />
@@ -197,7 +199,7 @@ const UserProfile = () => {
             <textarea
               onChange={handleChange}
               value={profileData.description}
-              className="flex h-[150px] bg-inherit border border-gray-400 mt-3 w-[1200px] rounded-md p-3 text-sm italic outline-none"
+              className="flex h-[150px] bg-inherit border border-gray-400 mt-3 w-[1300px] rounded-md p-3 text-sm italic outline-none"
               name="description"
             />
           </div>
